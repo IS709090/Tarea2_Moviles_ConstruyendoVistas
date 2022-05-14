@@ -16,6 +16,14 @@ class _MyAppState extends State<MyApp> {
   var colorHombre = Colors.grey;
   var peso = imc.peso;
   var altura = imc.altura;
+  final fieldText = TextEditingController();
+  final fieldText2 = TextEditingController();
+
+  void clearText() {
+    fieldText.clear();
+    fieldText2.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +33,13 @@ class _MyAppState extends State<MyApp> {
             appBar: AppBar(
                 backgroundColor: Colors.green,
                 centerTitle: true,
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        clearText();
+                      },
+                      icon: Icon(Icons.delete))
+                ],
                 title: Text(
                   'Calcular IMC',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
@@ -84,6 +99,7 @@ class _MyAppState extends State<MyApp> {
                         Expanded(
                             flex: 10,
                             child: TextField(
+                              controller: fieldText,
                               onChanged: (value) {
                                 imc.setAltura(double.parse(value));
                                 print(imc.altura);
@@ -113,6 +129,7 @@ class _MyAppState extends State<MyApp> {
                         Expanded(
                             flex: 10,
                             child: TextField(
+                              controller: fieldText2,
                               onChanged: (value) {
                                 imc.setPeso(double.parse(value));
                                 print(imc.peso);
