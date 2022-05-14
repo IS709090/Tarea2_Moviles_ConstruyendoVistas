@@ -106,8 +106,20 @@ class _MyAppState extends State<MyApp> {
                               },
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                label: Text("Ingresar altura (Metros)"),
+                                focusColor: Colors.green,
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                  borderSide: BorderSide(
+                                    color: Colors.green,
+                                    width: 2.0,
+                                  ),
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                                label: Text(
+                                  "Ingresar altura (Metros)",
+                                  style: TextStyle(color: Colors.green),
+                                ),
                               ),
                             ))
                       ],
@@ -136,8 +148,20 @@ class _MyAppState extends State<MyApp> {
                               },
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                label: Text("Ingresar peso (Kilogramos)"),
+                                focusColor: Colors.green,
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                  borderSide: BorderSide(
+                                    color: Colors.green,
+                                    width: 2.0,
+                                  ),
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                                label: Text(
+                                  "Ingresar peso (Kilogramos)",
+                                  style: TextStyle(color: Colors.green),
+                                ),
                               ),
                             ))
                       ],
